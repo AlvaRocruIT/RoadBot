@@ -1,1 +1,45 @@
+👥Proyecto ChateaConMiCV --> ChateaConEstaVacante
+
+7 agosto (To) Sara Fintual: "Sara, te tengo algo"
+13 agosto (From) Fintual: Me interesa.
+19 Agosto (From) Fintual: Ya no me interesa.
+20 agosto Pulbico en LinkedIn y salgo a ofrecerlo. 
+25 agosto (From) Rama: "Qué te parece? 
+5 septiembre (From) RAMA Feedback + Me interesa.
+25 septiembre (From) RAMA: "¿Y si revertimos el enfoque?"
+1 octubre (To) RAMA: "Te tengo el MVP"
+2 octubre (From) RAMA: "Veámoslo la prox semana".
+
+🤖Proyecto Chatea con esta vacante
+
+📅26 Septiembre:
+- Initial commit en GitHub y README.md
+- Partí creando Q&A.json
+- Creé en n8n proyecto chatVacante a partir de chatCV 
+27 Septiembre
+- Vinculé cursor a GitHub para orientar el desarrollo
+28 Septiembre
+- Index.html del chatbot
+- Le di una estructura en 3 pages (Home/vacante/chatbot)
+- Seleccioné el contexto de CCU para el prototipo
+- Adapté el estilo al webpage people-4ward
+29 Septiembre: 
+- Primeros avances del workflow con n8n
+- Definición de nodos y conexiones
+- Primer output exitoso: la página muestra respuesta personalizada
+30 Septiembre:
+- Grabé y agregué el video intro
+- Logré diferenciar el chat según oferta de trabajo
+📅1 octubre:
+- Suscribí versión premium de cursor
+- Refiné la interacción con el chat en n8n /rol
+2 octubre:
+- Mejora de interfaz visual del proyecto
+- Limpieza los códigos, ordenando lo que es de CSS y HTML.
+- Diagnóstico de cursor para sugerir limpieza de códigos
+3 octubre:
+- Pago la cuenta de n8n y actualicé a versión 1.113.3
+- Limpieza los códigos dentro de GitHub
+- Avance con formato responsivo para android+iOS
+- Creación hoja de ruta del proyecto  --> Nace RoadBot (Chatbot personal con hoja de ruta)
 
