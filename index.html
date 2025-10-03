@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asistente personal de Álvaro</title>
+
+  <!-- Fuente Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Nuevo stylesheet -->
+<link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+  <h1>Comencemos como un asistente de roadmap</h1>
+  <p>Háblame de algún proyecto; ¿Qué hito te gustaría profundizar?.</p>
+
+  <textarea id="userInput" rows="4" placeholder="¡Hola! 👋🏻 Te ayudo" autocomplete="off" autocapitalize="none" spellcheck="false"></textarea>
+  <button id="sendBtn" onclick="sendMessage()">Enviar</button>
+
+  <textarea id="currentResponse" rows="4" readonly placeholder="Aquí aparecerá tu respuesta"></textarea>
+
+  <h3>Historial</h3>
+  <button id="toggleHistoryBtn" onclick="toggleHistory()">Mostrar/ocultar historial</button>
+  <textarea id="historyBox" rows="8" readonly placeholder="Pulsa el botón para mostrar/ocultar el historial"></textarea>
+
+  <script type="module" src="main.js?v=4"></script>
+</body>
+</html>
