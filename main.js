@@ -4,21 +4,9 @@ const currentResponse = document.getElementById("currentResponse");
 const historyBox = document.getElementById("historyBox");
 const sendBtn = document.getElementById("sendBtn");
 
+// Endpoints n8n (prod/test)
 const PROD_URL = "https://alvarovargas.app.n8n.cloud/webhook/chat-screening";
 const TEST_URL = "https://alvarovargas.app.n8n.cloud/webhook-test/chat-screening";
-
-function getVacanteIdFromPath() {
-  const parts = window.location.pathname.split("/").filter(Boolean);
-  const explicit =
-    parts.find((p) => /^vacante[0-9]+$/i.test(p)) ||
-    (parts.includes("vacante1") ? "vacante1" : null) ||
-    (parts.includes("vacante2") ? "vacante2" : null);
-  return (
-    new URLSearchParams(location.search).get("vacante") ||
-    explicit ||
-    "vacante1"
-  );
-}
 
 function getPreferredEndpoint() {
   const params = new URLSearchParams(window.location.search);
@@ -71,7 +59,7 @@ async function sendMessage() {
   currentResponse.value = "🤖 Pensando...";
   if (sendBtn) sendBtn.disabled = true;
 
-  const payload = { text: input, vacante: getVacanteIdFromPath() };
+  const payload = { text: input };
   let endpoint = getPreferredEndpoint();
 
   try {
@@ -97,8 +85,7 @@ async function sendMessage() {
       raw ||
       "No se recibió respuesta.";
 
-    const updatedHistory =
-      previous + `\n👤 Tú: ${input}\n🤖 PartnerBot: ${reply}\n`;
+    const updatedHistory = previous + `\n👤 Tú: ${input}\n🤖 RoadBot: ${reply}\n`;
     currentResponse.value = reply;
     historyBox.value = updatedHistory;
     localStorage.setItem("chatHistory", updatedHistory);
@@ -119,8 +106,7 @@ async function sendMessage() {
     }
 
     const fallback = `Hmm... algo no salió bien 🤔. ${hint}`.trim();
-    const updatedHistory =
-      previous + `\n👤 Tú: ${input}\n🤖 PartnerBot: ${fallback}\n`;
+    const updatedHistory = previous + `\n👤 Tú: ${input}\n🤖 RoadBot: ${fallback}\n`;
     currentResponse.value = fallback;
     historyBox.value = updatedHistory;
     localStorage.setItem("chatHistory", updatedHistory);
@@ -139,3 +125,4 @@ function toggleHistory() {
 
 window.sendMessage = sendMessage;
 window.toggleHistory = toggleHistory;
+styles.css
