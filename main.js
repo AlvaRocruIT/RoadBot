@@ -38,7 +38,7 @@ async function postToEndpoint(endpoint, payload, timeoutMs = 45000) {
 
 document.addEventListener("DOMContentLoaded", () => {
   historyBox.value = localStorage.getItem("chatHistory") || "";
-  historyBox.style.display = "none";
+  historyBox.style.display = "block";
 
   inputBox.addEventListener("keydown", (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
@@ -118,9 +118,8 @@ async function sendMessage() {
 
 function toggleHistory() {
   const btn = document.getElementById("toggleHistoryBtn");
-  const isHidden = historyBox.style.display === "none";
-  historyBox.style.display = isHidden ? "block" : "none";
-  if (btn) btn.textContent = isHidden ? "Ocultar historial" : "Mostrar historial";
+  historyBox.style.display = "block";
+  if (btn) btn.textContent = "Ocultar historial";
 }
 
 window.sendMessage = sendMessage;
